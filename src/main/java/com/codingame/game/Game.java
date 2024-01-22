@@ -29,7 +29,7 @@ public class Game {
         if (gameState.rounds >= 300) {
             return true;
         }
-        if (repeatedFor4thTime()) {
+        if (repeatedFor3thTime()) {
             return true;
         }
         return gameState.generateMoves().isEmpty();
@@ -40,9 +40,9 @@ public class Game {
         if (moves.isEmpty()) { // either checkmated or stalemated player loses
             return gameState.currentPlayer^1;
         }
-        if (repeatedFor4thTime()) {
+        if (repeatedFor3thTime()) {
             if (gameState.isKingInCheck()) { // checking side loses
-                return gameState.currentPlayer^1;
+                return gameState.currentPlayer;
             }
             return Game.SECOND_PLAYER; // first player loses
         }
@@ -57,8 +57,8 @@ public class Game {
         return gameState.generateMoves();
     }
 
-    public boolean repeatedFor4thTime() {
-        return repetitions.getOrDefault(gameState.toKey(),0) >= 4;
+    public boolean repeatedFor3thTime() {
+        return repetitions.getOrDefault(gameState.toKey(),0) >= 3;
     }
 
     private void addRepetitionCounter(String key) {

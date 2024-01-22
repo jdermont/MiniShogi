@@ -124,9 +124,9 @@ public class Referee extends AbstractReferee {
         if (game.gameState.generateMoves().isEmpty() && !game.gameState.isKingInCheck()) {
             int p = game.gameState.currentPlayer;
             gameManager.addTooltip(gameManager.getPlayer(p), gameManager.getPlayer(p).getNicknameToken() + " stalemate");
-        } else if (game.repeatedFor4thTime()) {
+        } else if (game.repeatedFor3thTime()) {
             int p = game.gameState.currentPlayer^1;
-            gameManager.addTooltip(gameManager.getPlayer(p), gameManager.getPlayer(p).getNicknameToken() + " repeated for 4th time");
+            gameManager.addTooltip(gameManager.getPlayer(p), gameManager.getPlayer(p).getNicknameToken() + " repeated three times");
         }
     }
 
