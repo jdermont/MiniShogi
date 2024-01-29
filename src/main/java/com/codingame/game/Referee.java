@@ -126,7 +126,7 @@ public class Referee extends AbstractReferee {
             gameManager.addTooltip(gameManager.getPlayer(p), gameManager.getPlayer(p).getNicknameToken() + " stalemate");
         } else if (game.repeatedFor3thTime()) {
             int p = game.gameState.currentPlayer^1;
-            gameManager.addTooltip(gameManager.getPlayer(p), gameManager.getPlayer(p).getNicknameToken() + " repeated three times");
+            gameManager.addTooltip(gameManager.getPlayer(p), gameManager.getPlayer(p).getNicknameToken() + " repeated position for 3rd time");
         }
     }
 
