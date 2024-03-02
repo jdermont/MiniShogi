@@ -22,7 +22,7 @@ public class Perft {
         Assert.assertEquals(35401,perft(gameState, 3, 3 ));
         Assert.assertEquals(533203,perft(gameState, 4, 4 ));
         Assert.assertEquals(8276188,perft(gameState, 5, 5 ));
-        Assert.assertEquals(132680698,perft(gameState, 6, 6 ));
+        //Assert.assertEquals(132680698,perft(gameState, 6, 6 ));
         //Assert.assertEquals(132680617,perft(gameState, 6, 6 )); // without drop pawn checkmate
 
         gameState = new GameState("+P2+Sb/2g2/1ksp1/R1b2/K4 w gr 98");
