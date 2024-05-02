@@ -137,7 +137,7 @@ public class Referee extends AbstractReferee {
         if (output.contains(" ")) {
             String[] parts = output.split(" ");
             if ("random".equalsIgnoreCase(parts[0])) {
-                Collections.shuffle(availableMoves);
+                Collections.shuffle(availableMoves, gameManager.getRandom());
                 move = availableMoves.get(0);
             } else {
                 boolean found = false;
@@ -159,7 +159,7 @@ public class Referee extends AbstractReferee {
             message = sb.toString().trim();
         } else {
             if ("random".equalsIgnoreCase(output)) {
-                Collections.shuffle(availableMoves);
+                Collections.shuffle(availableMoves, gameManager.getRandom());
                 move = availableMoves.get(0);
             } else {
                 boolean found = false;
