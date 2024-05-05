@@ -214,7 +214,7 @@ public class GameState {
                 sb.append(piece.getChr(Game.FIRST_PLAYER));
             }
             for (Piece piece : hand2) {
-                sb.append(piece.getChr(Game.FIRST_PLAYER));
+                sb.append(piece.getChr(Game.SECOND_PLAYER));
             }
         }
         return sb.toString();
