@@ -94,7 +94,7 @@ public class Referee extends AbstractReferee {
 
         List<Move> availableMoves = game.getAvailableMoves();
         try {
-            Collections.shuffle(availableMoves);
+            Collections.shuffle(availableMoves, gameManager.getRandom());
             sendInputs(turn, player, opponent, availableMoves);
             player.execute();
             String output = player.getOutputs().get(0);
